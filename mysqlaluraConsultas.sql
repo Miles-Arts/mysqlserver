@@ -26,4 +26,6 @@ SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('ciudad de Mexico', 'Guadalajar
 AND EDAD > 21;
 
 SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('ciudad de Mexico', 'Guadalajara')
-AND EDAD BETWEEN 20 AND 25;
+AND (EDAD BETWEEN 20 AND 25);
+
+SELECT * FROM tabla_de_productos WHERE SABOR LIKE 'uva%';
