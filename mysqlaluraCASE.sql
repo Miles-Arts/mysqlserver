@@ -24,3 +24,12 @@ CASE
 END
 ORDER BY ENVASE;
 
+SELECT NOMBRE,
+CASE 
+    WHEN YEAR(fecha_de_nacimiento) < 1990 THEN 'Adultos'
+    WHEN YEAR(fecha_de_nacimiento) >= 1990 
+    AND YEAR(fecha_de_nacimiento) <= 1995 THEN 'Jóvenes' 
+    ELSE 'Niños' 
+END AS CLASIFICACION_EDAD
+FROM tabla_de_clientes;
+
