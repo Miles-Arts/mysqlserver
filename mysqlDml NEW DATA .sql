@@ -36,4 +36,15 @@ FROM jugos_ventas.tabla_de_productos);
        
        
        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
          
