@@ -46,6 +46,14 @@ INSERT INTO tb_indentificacion
 SELECT * FROM tb_indentificacion;
 
 INSERT INTO tb_indentificacion
+
 (DESCRIPCION) VALUES('CLIENTE H');
+
+SELECT * FROM tb_indentificacion;
+
+
+
+INSERT INTO tb_indentificacion
+(ID ,  DESCRIPCION) VALUES(NULL, 'CLIENTE I');
 
 SELECT * FROM tb_indentificacion;
