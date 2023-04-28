@@ -4,12 +4,14 @@ nombre único
 CASE SENSITIVE*/
 
 
+CALL hola_mundo;
+
+CALL muestra_numero;
+
+CALL RESULTADO;
 
 
-
-
-
-
+CALL concatenar;
 
 
 
