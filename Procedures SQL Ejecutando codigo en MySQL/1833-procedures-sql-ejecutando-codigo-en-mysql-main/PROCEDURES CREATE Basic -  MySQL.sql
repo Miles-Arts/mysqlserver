@@ -10,6 +10,7 @@ TIMESTAMP
 
 CASE SENSITIVE*/
 
+USE jugos_ventas;
 
 CALL hola_mundo;
 
