@@ -17,6 +17,17 @@ DECLARE venvase VARCHAR(20) DEFAULT 'Botella PET';
 DECLARE vprecio DECIMAL(4,2) DEFAULT 7.25;*/
 
 DECLARE mensaje VARCHAR(40);
+DECLARE EXIT HANDLER FOR 1062
+/* Añadir mensaje de error*/
+BEGIN
+
+	SET  mensaje =   "Producto duplicado";
+	/* 
+	Para incluir un nuevo producto repetido avisa del error
+	*/
+	SELECT mensaje;
+END;
+
 INSERT INTO tabla_de_productos (CODIGO_DEL_PRODUCTO,NOMBRE_DEL_PRODUCTO,SABOR,TAMANO,ENVASE,PRECIO_DE_LISTA)
      VALUES (vcodigo, vnombre, vsabor, vtamano, venvase, vprecio);
 SET  mensaje =   "Producto incluido con éxito";
