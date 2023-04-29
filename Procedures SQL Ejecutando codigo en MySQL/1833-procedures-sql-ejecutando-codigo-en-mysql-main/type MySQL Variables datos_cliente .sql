@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `datos_cliente`()
+BEGIN
+DECLARE cliente1 VARCHAR(10) DEFAULT 'Juan';
+DECLARE cliente2 INTEGER DEFAULT 10;
+DECLARE cliente3 DATE DEFAULT '2007-01-10';
+DECLARE cliente4 DECIMAL(4,2) DEFAULT 10.23;
+SELECT cliente1;
+SELECT cliente2;
+SELECT cliente3;
+SELECT cliente4;
+SELECT cliente5;
+END
