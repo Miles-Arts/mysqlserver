@@ -1,3 +1,5 @@
+USE jugos_ventas;
+
 CALL incluir_producto_parametros
 ('1000800', 'Sabor del Mar', '700 ml','Naranja', 'Botella de Vidrio', 2.25);
 
