@@ -27,7 +27,7 @@ SELECT * FROM tabla_de_productos;
 1004327 
 1088126
 */
-CALL define_sabor('1002334');
+CALL define_sabor('1037797');
 CALL define_sabor('1002767');
 CALL define_sabor('1004327');
 CALL define_sabor('1088126');
