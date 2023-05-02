@@ -1,0 +1,23 @@
+/* LÍNEA A LÍNEA EN UN ORDEN DETERMINADO*/
+/*
+DECLARACIÓN
+ABERTURA
+RECORRIDO
+CIERRE LIMPIAR
+*/
+
+CALL cursor_1;
+
+CALL cursor_2;
+
+
+SELECT NOMBRE FROM tabla_de_clientes LIMIT 4;
+
+CALL cursor_looping;
+
+SELECT NOMBRE FROM tabla_de_clientes;
+
+
+
+
+
