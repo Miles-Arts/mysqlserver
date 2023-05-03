@@ -62,9 +62,15 @@ FOREIGN KEY (NUMERO) REFERENCES facturas(NUMERO),
 FOREIGN KEY (CODIGO) REFERENCES productos(CODIGO)
 );
 
+/* ('3623344710', 'Marcos Rosas', 'Av. Universidad', 
+'Del Valle', 'Ciudad de México', 'EM', '22002012', 
+'1995-01-13', 26, 'M', 110000, 220000, 1);*/
 
-
-
+INSERT INTO clientes VALUES(
+'3623344710','Marcos Rosas','Av. Universidad','Del Valle',
+'Ciudad de México','EM','22002012','1996-01-13',26,'M',
+110000,220000,1
+);
 
 
 
