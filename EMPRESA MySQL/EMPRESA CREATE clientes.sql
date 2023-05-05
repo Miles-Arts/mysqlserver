@@ -41,6 +41,8 @@ CREATE TABLE vendedores (
   PRIMARY KEY (MATRICULA)
 ) ;
 
+SELECT * FROM facturas;
+
 CREATE TABLE facturas (
 NUMERO VARCHAR(5) NOT NULL,
 FECHA DATE,
@@ -110,5 +112,11 @@ AS FECHA, DNI, MATRICULA, IMPUESTO
 FROM jugos_ventas.facturas;
 
 SELECT * FROM items;
+
+/* Para borrar se puede utilizra DROP TABLE nombre_tabla */
+
+DROP TABLE nombre_tabla;
+
+
 
 
