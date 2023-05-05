@@ -113,10 +113,13 @@ SELECT NUMERO, FECHA_VENTA
 AS FECHA, DNI, MATRICULA, IMPUESTO 
 FROM jugos_ventas.facturas;
 
-SELECT * FROM items;
+SELECT * FROM facturas F
+INNER JOIN
+items I
+ON F.NUMERO = I.NUMERO;
 
+/*No se puede agregar información en una tambla hija desde una tabla Padre*/
 /* Para borrar se puede utilizra DROP TABLE nombre_tabla */
-
 DROP TABLE nombre_tabla;
 
 
