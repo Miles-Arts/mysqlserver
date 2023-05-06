@@ -1,7 +1,5 @@
-CREATE PROCEDURE `sp_venta` 
-(fecha DATE, maxitems INT,
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_venta`(fecha DATE, maxitems INT,
 maxcantidad INT)
-
 BEGIN
 
 DECLARE vcliente VARCHAR(11);
@@ -17,7 +15,7 @@ DECLARE vnfactura INT;
 DECLARE vcontador INT DEFAULT 1;
 
 
-/*Más 1 para que no se repita*/
+/*Mas 1 para que no se repita*/
 SELECT MAX(NUMERO) + 1 
 INTO vnfactura 
 FROM facturas;
