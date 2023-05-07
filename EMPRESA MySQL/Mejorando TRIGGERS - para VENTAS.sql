@@ -1,8 +1,11 @@
+/*Creado tabla auxiliar*/
 CREATE TABLE facturacion(
 FECHA DATE NULL,
 VENTA_TOTAL FLOAT
 );
 
+
+/* Creando trigger INSERT - DELETE -UPDATE*/
 DELIMITER //
 CREATE TRIGGER TG_FACTURACION_INSERT 
 AFTER INSERT ON items
@@ -45,11 +48,13 @@ FOR EACH ROW BEGIN
   GROUP BY A.FECHA;
 END //
 
+SELECT * FROM facturacion;
 
+/*CREADOR de VENTA*/
+CALL sp_venta('20210622',15,100);
 
-
-
-
+/*VER Venta en FACTURACION*/
+SELECT * FROM facturacion WHERE FECHA = '20210622';
 
 
 

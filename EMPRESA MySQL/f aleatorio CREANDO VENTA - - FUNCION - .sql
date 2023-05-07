@@ -18,7 +18,6 @@ SELECT MAX(NUMERO) FROM facturas;
 SELECT COUNT(*) FROM facturas;
 
 /*Número descendente en todas las facturas*/
-
 SELECT NUMERO FROM FACTURAS ORDER BY NUMERO DESC;
 
 SELECT NUMERO FROM FACTURAS ORDER BY NUMERO DESC LIMIT = 88000;
@@ -57,11 +56,12 @@ SELECT NUMERO, FECHA_VENTA
 AS FECHA, DNI, MATRICULA, IMPUESTO 
 FROM jugos_ventas.facturas;
 
-
-
-
-
-
+/*Año mes y día sin espacio */
+/*CREA la factura*/
+CALL sp_venta('20210619',50,100);
+CALL sp_venta('20210619',3,100);
+/*Muestra la factura*/
+SELECT MAX(NUMERO) FROM facturas;
 
 
 
