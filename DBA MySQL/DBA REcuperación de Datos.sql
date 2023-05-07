@@ -15,4 +15,19 @@ DATA BASE ADMINISTRATOR
 
 */
 
+/* Conexiones de MySQL
+mover la carpeta connections de maquina a maquina 
+con las misma smas conexiones
 
+PASOS CARPETA
+
+USUARIO
+-NOMBRE USURIO PC-
+APPDATA
+ROAMING
+MySQL
+CARPETA WORBENCH ABRI - buscar file --connections--
+
+
+
+*/
