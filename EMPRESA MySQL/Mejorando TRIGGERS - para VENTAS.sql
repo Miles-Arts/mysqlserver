@@ -92,8 +92,10 @@ FOR EACH ROW BEGIN
 END //
 
 
-
-
+/*CREADOR de VENTA*/
+CALL sp_venta('20210622',15,100);
+/*VER Venta en FACTURACION*/
+SELECT * FROM facturacion WHERE FECHA = '20210622';
 
 
 
