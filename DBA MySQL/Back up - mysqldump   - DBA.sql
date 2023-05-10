@@ -48,9 +48,13 @@ UNLOCK instance;
 /*Se puede automatizar por las noches
 */
 
+LOCK instance for backup;
 
+/*activar la DB*/
+UNLOCK instance;
 
-
+/*BACKUP LOGICO Y FISICO SE PUEDEN 
+HACER LOS DOS */
 
 
 
