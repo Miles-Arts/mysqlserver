@@ -54,7 +54,9 @@ LOCK instance for backup;
 UNLOCK instance;
 
 /*BACKUP LOGICO Y FISICO SE PUEDEN 
-HACER LOS DOS */
+HACER LOS DOS
+
+SIEMPRE CON EL ARCHIVO  my.ini.*/
 
 
 
