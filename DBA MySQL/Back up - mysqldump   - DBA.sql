@@ -35,14 +35,18 @@ Stored Procedures usar --routines y events
 
 */
 
+USE jugos_ventas;
 
 
+/*PARA HACER BACK UP DESDE WORKBENCH*/
+/*detener la DB*/
+LOCK instance for backup;
 
+/*activar la DB*/
+UNLOCK instance;
 
-
-
-
-
+/*Se puede automatizar por las noches
+*/
 
 
 
