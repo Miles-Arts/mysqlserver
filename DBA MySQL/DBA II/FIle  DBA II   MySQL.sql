@@ -1,20 +1,33 @@
+/* LOS INNER JOIN hacen demoras las consultas en Mysql */
+/*El DBA debe ayudar al analista a optmizar las consultas*/
+
+
+-- COST 3.75
+/*"query_cost": "3.75"*/
 CREATE DATABASE jugos_ventas;
 USE jugos_ventas;
 
 SELECT CODIGO_DEL_PRODUCTO FROM tabla_de_productos;
 
-
+/* "query_cost": "43584.04" */
 SELECT A.CODIGO_DEL_PRODUCTO, C.CANTIDAD FROM tabla_de_productos A 
 INNER JOIN items_facturas C 
 ON A.CODIGO_DEL_PRODUCTO = C.CODIGO_DEL_PRODUCTO;
 
-SELECT A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA) AS AÑO, C.CANTIDAD FROM tabla_de_productos A 
+/*   "query_cost": "155581.45"                                  */
+SELECT A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA) AS AÑO, C.CANTIDAD FROM tabla_de_productos A INNER JOIN items_facturas C ON A.CODIGO_DEL_PRODUCTO = C.CODIGO_DEL_PRODUCTO INNER JOIN facturas B ON C.NUMERO= B.NUMERO;
+
+/*           "query_cost": "130099.65"  "query_cost": "130099.65"                                 */
+SELECT A.CODIGO_DEL_PRODUCTO, YEAR(B.FECHA_VENTA) AS ANO, SUM(C.CANTIDAD) FROM tabla_de_productos A INNER JOIN items_facturas C ON A.CODIGO_DEL_PRODUCTO = C.CODIGO_DEL_PRODUCTO INNER JOIN facturas B ON C.NUMERO = B.NUMERO GROUP BY A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA) ORDER BY A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA);
+
+SELECT A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA) AS ANO, SUM(C.CANTIDAD) 
+FROM tabla_de_productos A 
 INNER JOIN items_facturas C 
 ON A.CODIGO_DEL_PRODUCTO = C.CODIGO_DEL_PRODUCTO
 INNER JOIN facturas B
-ON C.NUMERO = B.NUMERO;
+ON C.NUMERO = B.NUMERO
+GROUP BY A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA)
+ORDER BY A.CODIGO_DEL_PRODUCTO, YEAR(FECHA_VENTA);
 
-
-
-
-
+/*EXPLAIN SELECT A.CODIGO_DEL_PRODUCTO FROM tabla_de_productos A \G;
+*/
