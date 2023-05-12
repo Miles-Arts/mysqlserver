@@ -1,7 +1,7 @@
 /* PLan de ejecución entender como MySQL
 cre alos Query
 
-
+COLOR verde Que aquel Table Scan está usando un índice.
 
 
 
